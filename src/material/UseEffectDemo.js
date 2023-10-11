@@ -8,10 +8,10 @@ function UseEffectDemo() {
 
   console.log("On render");
   useEffect(() => {
-    // fetch(`https://jsonplaceholder.typicode.com/${resourceType}`)
-    //   .then((response) => response.json())
-    //   .then((json) => setItems(json));
-    // console.log(items);
+    fetch(`https://jsonplaceholder.typicode.com/${resourceType}`)
+      .then((response) => response.json())
+      .then((json) => setItems(json));
+    console.log(items);
     ref.current = resourceType;
     console.log("On useEffect   : " + resourceType);
     console.log("Ref Current   : " + ref.current);
